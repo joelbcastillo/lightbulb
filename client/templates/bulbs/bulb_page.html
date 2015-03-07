@@ -1,17 +1,10 @@
 <template name="bulbPage">
-    <div class="bulb row">
-        <div class="bulb-image">
-            <div class="col-xs-1">
-                <img src="http://placehold.it/50x50" />
-            </div>
-            <div class="col-xs-push-2">
-                <span class="bulb_title"><h3>{{title}}</h3></span> <br />
-                <span class="">{{synopsis}}</span>
-            </div>
-        </div>
+   <div class="bulb-page page">
+       {{> bulbItem}}
+   </div>
+    <div class="row">
+        <br /><br /><br/>
+        {{>sparksList}}
     </div>
 
-    <div class="row">
-        {{> sparkList }}
-    </div>
 </template>

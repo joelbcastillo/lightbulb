@@ -1,5 +1,3 @@
-Template.bulbPage.helpers({
-    bulbs: function() {
-        return Bulbs.find(this.id);
-    }
-});
+//Template.bulbItem.helpers(
+//    console.log(Bulbs.findOne())
+//);
