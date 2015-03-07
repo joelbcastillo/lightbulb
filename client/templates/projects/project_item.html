@@ -1,0 +1,16 @@
+<template name="projectItem">
+    <div class="project">
+        <div class="project-content">
+            <h3>
+                <a href="{{pathFor 'projectPage'}}">{{name}}</a>
+                <span>{{description}}</span>
+            </h3>
+            <p>
+                submitted by {{author}}
+                {{# if ownProject}}
+                    <a href="{{pathFor 'projectEdit'}}">Edit</a>
+                {{/if}}
+            </p>
+        </div>
+    </div>
+</template>
