@@ -1,4 +1,7 @@
 <template name="projectsList">
+    {{#if currentUser}}
+    <h5><a class="btn btn-default" href="{{pathFor 'projectCreate'}}">Create Project</a></h5>
+    {{/if}}
     <div class="projects">
         {{# each projects}}
             {{> projectItem}}
