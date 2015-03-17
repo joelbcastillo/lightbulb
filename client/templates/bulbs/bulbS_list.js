@@ -1,8 +1,8 @@
 Template.bulbsList.helpers({
     bulbs: function() {
-        bulbs = Bulbs.find({}).fetch();
+        bulbs = Bulbs.find({});
         rows = [];
-        row_len = 3;
+        row_len = Bulbs.find({}).count();
         while (bulbs.length > row_len) {
             rows.push({
                 row: bulbs.slice(0,row_len)
@@ -10,7 +10,6 @@ Template.bulbsList.helpers({
             bulbs = bulbs.slice(row_len);
         }
         rows.push({row: bulbs});
-        //console.log(bulbs);
         return rows;
     }
 });

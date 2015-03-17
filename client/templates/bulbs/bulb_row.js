@@ -4,7 +4,6 @@
 
 Template.bulbRow.helpers({
     rows: function(){
-        console.log(this.row);
         return this.row;
     }
 });
