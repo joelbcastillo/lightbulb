@@ -158,3 +158,42 @@ body {
     margin-bottom: 5px;
     pointer-events: auto;
 }
+
+/*ADDITIONS*/
+.sign-up-form {
+    padding-left: 12%;
+    padding-right: 12%;
+    max-width: 500px;
+}
+
+#email .signup-button .checkbox {
+    padding-left: 12%;
+    padding-right: 12%;
+    max-width: 585px;
+}
+
+#logo {
+    width:600px;
+    height: 230px;
+    align-content: center;
+}
+
+.logo-content {
+    padding-left: 300px;
+}
+
+.home-content-logo {
+    background-image: url("http://i.stack.imgur.com/H9kT6.jpg");
+}
+
+.testimonials-content {
+    margin-left: auto;
+    margin-right: auto;
+    padding:30px;
+    margin:20px;
+    max-width: 585px;
+
+}
+.ad-content {
+    border: solid;
+}
