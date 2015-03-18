@@ -6,6 +6,8 @@ Template.projectCreate.events({
             description: $(event.target).find('[name=description]').val()
         };
 
+        $('body').removeClass('modal-open');  // or else scrolling won't work!
+
         Meteor.call('projectInsert', project, function (error, result) {
             if (error)
                 return alert(error.reason);
