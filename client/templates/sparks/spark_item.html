@@ -1,4 +1,5 @@
 <template name="sparkItem">
+
     <div class="bulb">
         <div class="bulb-content">
             <li>
@@ -9,5 +10,22 @@
             </li>
         </div>
         <a href="" class="discuss btn btn-default">Comment</a>
+        <p> {{ commentsCount }} comments </p>
     </div>
+
+    <div class="bulb">
+        <div class="bulb-content">
+            <ul>
+                {{# each comments }}
+                    {{> commentItem }}
+                {{/ each }}
+            </ul>
+            {{#if currentUser}}
+                {{> commentSubmit}}
+            {{else}}
+                <p>Please log in to leave a comment.</p>
+            {{/if}}
+        </div>
+    </div>
+
 </template>
