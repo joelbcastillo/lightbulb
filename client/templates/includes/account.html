@@ -1,0 +1,80 @@
+<template name="account">
+    <div class="row">
+        <div class="col-xs-9">
+
+            <div role="tabpanel">
+
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#projects" aria-controls="projects" role="tab" data-toggle="tab">Projects</a></li>
+                    <li role="presentation"><a href="#teams" aria-controls="teams" role="tab" data-toggle="tab">Teams</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="projects">
+                        <div class="col-xs-6" style="border-right: 1px solid #ccc;">
+                            <h4>
+                                You Own {{selfProjectCount}} Projects
+                                <!--<a class="btn btn-default pull-right" href="{{pathFor 'projectCreate'}}"><span class="glyphicon glyphicon-plus"></span></a>-->
+                                <button type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#createProjectModal">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </h4>
+                            <br/>
+                            {{>projectsListSelf}}
+                        </div>
+                        <div class="col-xs-6">
+                            <h4>
+                                You Contribute to {{otherProjectCount}} Projects
+                            </h4>
+                            <br/>
+                            {{>projectsListOther}}
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="teams">
+                        <h1>STOP! What are you doing here?! Teams have not yet been implemented.</h1>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Use template for user-->
+        <div class="col-xs-3" style="text-align: center;">
+            <h3>Dirk Diggler</h3>
+            <h5>BrockLanders</h5>
+
+            <p>
+                <img src="http://placehold.it/200x200" alt="User Avatar" width="200px" height="200px">
+            </p>
+            <p>
+                <span class="glyphicon glyphicon-globe"></span> Online
+                <span style="margin-right:5em"></span>
+                <button class="btn btn-default btn-xs" href="#">Edit Profile</button>
+            </p>
+            <p>
+                <a href="#">ddigg@email.com</a><br/>
+                New York, New York
+            </p>
+            <p>
+                <span class="glyphicon glyphicon-time"></span> Member Since: <br/> <strong>December 21, 2012</strong>
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Add Project Modal -->
+    <div class="modal fade" id="createProjectModal" tabindex="-1" role="dialog" aria-labelledby="createProjectModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Create A New Project</h4>
+                </div>
+                <div class="modal-body">
+                    {{> projectCreate}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</template>

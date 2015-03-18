@@ -1,9 +1,14 @@
-<template name="projectsList">
-    {{#if currentUser}}
-    <h5><a class="btn btn-default" href="{{pathFor 'projectCreate'}}">Create Project</a></h5>
-    {{/if}}
+<template name="projectsListSelf">
     <div class="projects">
-        {{# each projects}}
+        {{#each projects}}
+            {{> projectItem}}
+        {{/each}}
+    </div>
+</template>
+
+<template name="projectsListOther">
+    <div class="projects">
+        {{#each projects}}
             {{> projectItem}}
         {{/each}}
     </div>
