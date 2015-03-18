@@ -91,6 +91,10 @@ body {
   .sparks li p:last-child {
     margin-bottom: 0; }
 
+  .spark{
+
+  }
+
 .dropdown-menu span {
   display: block;
   padding: 3px 20px;

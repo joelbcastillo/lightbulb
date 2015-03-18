@@ -4,7 +4,7 @@
         <div class="bulb-content">
             <li>
                 <h4>
-                    <span class="date">on {{submittedText}}</span>
+                    <span class="spark date">on {{submittedText}}</span>
                 </h4>
                 <p>{{body}}</p>
             </li>
@@ -15,11 +15,13 @@
 
     <div class="bulb">
         <div class="bulb-content">
+            {{# if selectedSpark }}
             <ul>
                 {{# each comments }}
                     {{> commentItem }}
                 {{/ each }}
             </ul>
+            {{/if }}
             {{#if currentUser}}
                 {{> commentSubmit}}
             {{else}}
