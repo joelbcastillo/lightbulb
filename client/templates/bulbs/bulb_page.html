@@ -1,10 +1,15 @@
 <template name="bulbPage">
-   <div class="bulb-page page">
-       {{> bulbItem}}
-   </div>
-    <div class="row">
-        <br /><br /><br/>
-        {{>sparksList}}
+    <div class="bulb-page page">
+        {{> bulbItem }}
+        <ul class="sparks">
+            {{#each sparks}}
+                {{> sparkItem }}
+            {{/each}}
+        </ul>
+        {{# if currentUser }}
+            {{> sparkSubmit }}
+        {{else}}
+            <p> Please log in to add a new Spark. </p>
+        {{/ if }}
     </div>
-
 </template>

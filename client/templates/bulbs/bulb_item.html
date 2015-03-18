@@ -1,14 +1,13 @@
 <template name="bulbItem">
-    <div class="bulb col-xs-4">
-        <div class="bulb-image">
-            <div class="col-xs-1">
-                <img src="http://placehold.it/50x50" />
-            </div>
-            <div class="col-xs-11" style="padding-left: 10px;">
-                <a href="{{pathFor 'bulbPage'}}">{{title}}</a>
-                <br />
-                <span class="">{{synopsis}}</span>
-            </div>
+    <div class="bulb">
+        <div class="bulb-content">
+            <h3>{{title}}<span>&nbsp;&nbsp;{{synopsis}}</span></h3>
+            <p>
+                submitted by {{author}}
+                <a href="{{pathFor 'bulbPage'}}">{{sparksCount}} Sparks</a>
+                {{#if ownBulb}}<a href="{{pathFor 'bulbEdit'}}">Edit</a>{{/if}}
+            </p>
         </div>
+        <a href="{{ pathFor 'bulbPage' }}" class="discuss btn btn-default">Discuss</a>
     </div>
 </template>

@@ -3,7 +3,7 @@
  */
 
 Template.bulbRow.helpers({
-    rows: function(){
+    row: function(){
         return this.row;
     }
 });
