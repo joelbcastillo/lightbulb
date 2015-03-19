@@ -1,0 +1,12 @@
+<template name="sparkSubmit">
+    <form name="spark" class="spark-form form">
+        <div class="form-group {{ errorClass 'body' }}">
+            <div class="controls">
+                <label for="body">Provide additional key points for this idea</label>
+                <textarea name="body" id="body" class="form-control" rows="3"></textarea>
+                <span class="help-block">{{errorMessage 'body'}}</span>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Spark</button>
+    </form>
+</template>
