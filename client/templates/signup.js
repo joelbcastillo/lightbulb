@@ -6,8 +6,8 @@ Template.signup.events({
             firstName = $(event.target).find('[name=firstName]').val(),
             lastName =  $(event.target).find('[name=lastName]').val(),
             email= $(event.target).find('[name=email]').val(),
-            password =$(event.target).find('[name=password]').val()
-        
+            password =$(event.target).find('[name=password]').val();
+
         Accounts.createUser({
             username: username,
             email : email,
@@ -16,9 +16,9 @@ Template.signup.events({
                 firstname: firstName,
                 lastname: lastName
             }
-
         });
-        console.log('javlon rocks');
+        Router.go('/');
+
     }
 
 });
