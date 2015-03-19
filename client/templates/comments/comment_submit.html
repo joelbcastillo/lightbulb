@@ -1,0 +1,18 @@
+<template name="commentSubmit">
+    <form name="comment">
+        <!--<div class="form-group {{ errorClass 'body' }}">-->
+            <!--<div class="controls">-->
+                <!--<label for="body">Provide additional key points for this idea</label>-->
+                <!--<textarea name="body" id="body" class="form-control" rows="2"></textarea>-->
+                <!--<span class="help-block">{{errorMessage 'body'}}</span>-->
+            <!--</div>-->
+            <!--<button type="submit" class="btn btn-primary" style="text-align: right;">Add Comment</button>-->
+        <!--</div>-->
+        <div class="input-group">
+            <input name="body" id="body" type="text" class="form-control" placeholder="Add Comment">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="submit">Submit</button>
+            </span>
+        </div>
+    </form>
+</template>

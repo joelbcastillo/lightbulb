@@ -1,0 +1,15 @@
+<template name="bulbItem">
+
+    <script>
+        $('.bulbPopover').popover(); // has sticking problem
+    </script>
+    <span class="image-wrapper" style="position: relative;">
+        <a href="{{pathFor 'bulbPage'}}">
+            <img src="http://placehold.it/200x200" alt="{{title}}" style="padding: 10px;" width="200px" height="200px"/>
+            <span class="bulbPopover" style="position: absolute; left: 0; top: -80px; color: #FFF; width: 160px; margin: 20px; font-size: 16px;" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="{{synopsis}}">
+                {{title}}
+            </span>
+        </a>
+    </span>
+
+</template>

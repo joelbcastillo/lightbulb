@@ -159,50 +159,14 @@ body {
     pointer-events: auto;
 }
 
-/*ADDITIONS*/
-.sign-up-form {
-    padding-left: 12%;
-    padding-right: 12%;
-    max-width: 500px;
-}
 
-#email .signup-button .checkbox {
-    padding-left: 12%;
-    padding-right: 12%;
-    max-width: 585px;
+/* Additions */
+.spark-good {
+    background-color: lightgreen;
 }
-
-#logo {
-    width:600px;
-    height: 230px;
-    align-content: center;
+.spark-neutral {
+    background-color: lightgoldenrodyellow;
 }
-
-.logo-content {
-    padding-left: 300px;
-}
-
-.home-content-logo {
-    background-image: url("http://i.stack.imgur.com/H9kT6.jpg");
-}
-
-.testimonials-content {
-    margin-left: auto;
-    margin-right: auto;
-    padding:30px;
-    margin:20px;
-    max-width: 585px;
-
-}
-.ad-content {
-    border: solid;
-}
-
-.message-list {
-    height: 500px;
-    overflow: auto;
-}
-
-.message-item {
-    height: 10px;
+.spark-bad {
+    background-color: indianred;
 }

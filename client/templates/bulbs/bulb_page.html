@@ -1,0 +1,72 @@
+<template name="bulbPage">
+    <div class="bulb-page">
+        <span style="text-align: center">
+            <a href="{{pathFor 'projectPage' _id=project._id}}">
+                <h3>{{project.name}}</h3>
+                <p>{{project.description}}</p>
+            </a>
+        </span>
+        <hr style="border-top: 1px solid #ccc;"> <!-- override bootstrap native css -->
+
+        <div class="row">
+
+            <div class="col-xs-8">
+
+                <!--<p>-->
+                    <!--<img src="http://placehold.it/100x100" style="padding-right: 10px; float:left;" width="110px" height="100px"/>-->
+                    <!--<h4>{{title}}</h4>-->
+                    <!--{{synopsis}}-->
+                    <!--<br style="clear: both;" />-->
+                <!--</p>-->
+
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" src="http://placehold.it/100x100" alt="bulb">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">{{title}}</h4>
+                        {{synopsis}}
+                    </div>
+                </div>
+
+                <br/>
+                <div class="col-xs-6">
+                    <div style="padding-bottom: 10px;">
+                        <a type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#createSparkModal">
+                            <span class="glyphicon glyphicon-plus" style="font-size: 20px"></span>
+                        </a>
+                    </div>
+                    {{> sparksList}}
+                </div>
+
+                <div class="col-xs-6">
+                    {{> commentsList}}
+                </div>
+
+            </div>
+
+            <div class="col-xs-4">
+                Chat Template
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Add Spark Modal -->
+    <div class="modal fade" id="createSparkModal" tabindex="-1" role="dialog" aria-labelledby="createSparkModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Create A New Spark</h4>
+                </div>
+                <div class="modal-body">
+                    {{> sparkSubmit }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</template>

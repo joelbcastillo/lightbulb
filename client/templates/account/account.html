@@ -15,9 +15,12 @@
                             <h4>
                                 You Own {{selfProjectCount}} Projects
                                 <!--<a class="btn btn-default pull-right" href="{{pathFor 'projectCreate'}}"><span class="glyphicon glyphicon-plus"></span></a>-->
-                                <button type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#createProjectModal">
-                                    <span class="glyphicon glyphicon-plus"></span>
-                                </button>
+                                <!--<a href="#" data-toggle="modal" data-target="#createProjectModal" class="pull-right">-->
+                                    <!--<span class="glyphicon glyphicon-plus"></span> New-->
+                                <!--</a>-->
+                                <a type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#createProjectModal">
+                                    <span class="glyphicon glyphicon-plus"></span> New
+                                </a>
                             </h4>
                             <br/>
                             {{>projectsListSelf}}
@@ -48,13 +51,17 @@
             </p>
             <p>
                 <span class="glyphicon glyphicon-globe"></span> Online
-                <span style="margin-right:5em"></span>
+                <span style="margin-right:4em"></span>
                 <button class="btn btn-default btn-xs" href="#">Edit Profile</button>
             </p>
-            <p>
-                <a href="#">ddigg@email.com</a><br/>
-                New York, New York
-            </p>
+            <div style="padding-top: 10px; padding-bottom: 10px;">
+                <p>
+                    <a href="#">ddigg@email.com</a><br/>
+                </p>
+                <p>
+                    New York, New York
+                </p>
+            </div>
             <p>
                 <span class="glyphicon glyphicon-time"></span> Member Since: <br/> <strong>December 21, 2012</strong>
             </p>
