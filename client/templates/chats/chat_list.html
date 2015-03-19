@@ -1,0 +1,12 @@
+<template name="chatList">
+        <div class="form-control message-list" id="messages">
+            <ul class="media-list">
+                {{#each messages}}
+                    <li class="media">
+                        {{> chatMessage}}
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+</template>
+

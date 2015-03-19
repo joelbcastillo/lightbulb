@@ -197,3 +197,12 @@ body {
 .ad-content {
     border: solid;
 }
+
+.message-list {
+    height: 500px;
+    overflow: auto;
+}
+
+.message-item {
+    height: 10px;
+}
