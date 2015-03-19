@@ -11,6 +11,7 @@ Meteor.publish('sparks', function(bulbId) {
     return Sparks.find({ bulbId: bulbId });
 });
 
-Meteor.publish('comments', function()  {
-    return Comments.find();
+Meteor.publish('comments', function(sparkId)  {
+    check(sparkId, String);
+    return Comments.find({ sparkId: sparkId });
 });
