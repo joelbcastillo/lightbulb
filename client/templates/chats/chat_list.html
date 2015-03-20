@@ -1,12 +1,15 @@
 <template name="chatList">
-        <div class="form-control message-list" id="messages">
-            <ul class="media-list">                
-		{{#each messages}}
-                    <li class="media">
-                        {{> chatMessage}}
-                    </li>
-                {{/each}}
-            </ul>
-        </div>
+    <div class="form-control message-list" id="messages">
+        <!--{{#if nextPath}}-->
+            <a class="load-more" href="{{nextPath}}">Load more</a>
+        <!--{{/if}}-->
+        <ul class="media-list">
+            {{#each messages}}
+                <li class="media">
+                    {{> chatMessage}}
+                </li>
+            {{/each}}
+        </ul>
+    </div>
 </template>
 
