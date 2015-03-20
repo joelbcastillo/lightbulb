@@ -4,7 +4,7 @@ Template.chatList.helpers({
 	//console.log(msgs);
 	//msgs.reverse();        
 	//return Messages.find({});
-	return Messages.find({}, {sort: {createdDate: 1} });
+	return Messages.find({}, {sort: {createdDate: -1} });
     }
 });
 

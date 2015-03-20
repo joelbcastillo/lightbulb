@@ -1,6 +1,9 @@
 <template name="chat">
     <div class="col-md-4 pull-right" >
-        {{> chatList}}
+	{#if {{nextPath}}}
+	<a class="load-more" href="{{nextPath}}">Load more</a>
+	{{/if }}        
+	{{> chatList}}
         {{> chatInput}}
     </div>
 </template>

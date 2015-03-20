@@ -4,7 +4,7 @@ Meteor.publish('projects', function() {
 
 Meteor.publish('messages', function(options) {
     check(options, {
-        sort: Object,
+	sort: Object,
         limit: Number
     });
     return Messages.find({}, options);
