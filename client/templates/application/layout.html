@@ -2,8 +2,18 @@
     <div class="container-fluid" style="min-width: 960px;">
         {{>header}}
         {{>errors}} <!-- For bulb exists error, do an error in the modal (like empty title error) -->
-        <div id="main">
+
+        {{#if inProject}}
+            <div class="row">
+                <div class="col-xs-8">
+                    {{> yield}}
+                </div>
+                <div class="col-xs-4">
+                    {{> chat}}
+                </div>
+            </div>
+        {{else}}
             {{> yield}}
-        </div>
+        {{/if}}
     </div>
 </template>

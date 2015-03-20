@@ -1,0 +1,11 @@
+<template name="messageList">
+    <div class="form-control message-list" id="messages" style="height: 500px;">
+        <ul class="media-list">
+            {{#each messages}}
+                <li class="media">
+                    {{> messageItem}}
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</template>
