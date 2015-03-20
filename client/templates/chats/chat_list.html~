@@ -1,4 +1,7 @@
 <template name="chatList">
+	{{#if nextPath}}
+      		<a class="load-more" href="{{nextPath}}">Load more</a>
+    	    {{/if}}
         <div class="form-control message-list" id="messages">
             <ul class="media-list">                
 		{{#each messages}}

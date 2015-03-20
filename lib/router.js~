@@ -19,7 +19,7 @@ ProjectPageController = RouteController.extend({
     return Projects.findOne(this.params._id);
   },
   findOptions: function() {
-    return {sort: {createdDate: -1}, limit: this.messagesLimit()};
+    return {sort: {submitted: -1}, limit: this.messagesLimit()};
   },
   waitOn: function() {
     return Meteor.subscribe('messages', this.findOptions());

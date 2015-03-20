@@ -17,7 +17,7 @@ Template.chatInput.events({
         var messageProperties = {
             message: $('#enteredMessage').val(),
             username: Meteor.user().username,
-            projectId: template.data.project._id
+            projectId: template.data.projId
         };
 
         console.log(messageProperties.projectId);

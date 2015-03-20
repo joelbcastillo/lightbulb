@@ -2,5 +2,8 @@
     <!--<div class="project-page page">-->
         <!--{{> projectItem}}-->
     <!--</div>-->
+    {{#if nextPath}} 
+ 	<a class="load-more" href="{{nextPath}}">Load more</a>
+    {{/if}}
     {{> chat}}
 </template>
