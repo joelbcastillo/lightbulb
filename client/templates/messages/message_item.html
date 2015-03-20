@@ -1,0 +1,14 @@
+<template name="messageItem">
+    <div class="media-body message-item">
+        <div class="media">
+            <a class="pull-left" href="#">
+                <img class="media-object glyphicon glyphicon-exclamation-sign" />
+            </a>
+            <div class="media-body" >
+                {{message}}
+                <br />
+                <small class="text-muted">{{username}} | {{createdDate}}</small>
+            </div>
+        </div>
+    </div>
+</template>

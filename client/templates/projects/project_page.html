@@ -1,50 +1,50 @@
 <template name="projectPage">
+    <div class="project-page">
 
-    <span style="text-align: center;">
-        <h3>{{name}}</h3>
-        <p>{{description}}</p>
-    </span>
-    <hr style="border-top: 1px solid #ccc;"> <!-- override bootstrap native css -->
+        <!--<a type="button" class="btn btn-default pull-left" href="{{pathFor 'account'}}" style="position: absolute; z-index: 1;">-->
+            <!--<span class="glyphicon glyphicon-chevron-left"></span> Back-->
+        <!--</a>-->
 
-    <div class="row">
-
-        <div class="col-xs-1" style="text-align: center;">
-
-            <!--<h1><a href="#" data-toggle="modal" data-target="#createBulbModal"><span class="glyphicon glyphicon-plus"></span></a></h1>-->
-            <!--<h1><a href="#"><span class="glyphicon glyphicon-user"></span></a></h1>-->
-            <!--<h1><a href="#" data-toggle="modal" data-target="#editProjectModal"><span class="glyphicon glyphicon-pencil"></span></a></h1>-->
-            <!--<h1><a href="#"><span class="glyphicon glyphicon-folder-close"></span></a></h1>-->
-
-            <div style="padding-bottom: 10px;">
-                <a type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#createBulbModal">
-                    <span class="glyphicon glyphicon-plus" style="font-size: 20px"></span>
-                </a>
+        <div class="row">
+            <div class="col-xs-12">
+                <span style="text-align: center;">
+                    <h3>{{name}}</h3>
+                    <p>{{description}}</p>
+                </span>
+                <hr style="border-top: 1px solid #ccc;"> <!-- override bootstrap native css -->
             </div>
-            <div style="padding-bottom: 10px;">
-                <a type="button" class="btn btn-default btn-lg">
-                    <span class="glyphicon glyphicon-user" style="font-size: 20px"></span>
-                </a>
-            </div>
-            <div style="padding-bottom: 10px;">
-                <a type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#editProjectModal">
-                    <span class="glyphicon glyphicon-pencil" style="font-size: 20px"></span>
-                </a>
-            </div>
-            <div style="padding-bottom: 10px;">
-                <a type="button" class="btn btn-default btn-lg">
-                    <span class="glyphicon glyphicon-folder-close" style="font-size: 20px"></span>
-                </a>
-            </div>
-
         </div>
 
-        <div class="col-xs-7" style="text-align: center;">
-            {{> bulbsList}}
+        <div class="row">
+            <div class="col-xs-1">
+
+                <div style="padding-bottom: 10px;">
+                    <a type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#createBulbModal">
+                        <span class="glyphicon glyphicon-plus" style="font-size: 20px"></span>
+                    </a>
+                </div>
+                <div style="padding-bottom: 10px;">
+                    <a type="button" class="btn btn-default btn-lg">
+                        <span class="glyphicon glyphicon-user" style="font-size: 20px"></span>
+                    </a>
+                </div>
+                <div style="padding-bottom: 10px;">
+                    <a type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#editProjectModal">
+                        <span class="glyphicon glyphicon-pencil" style="font-size: 20px"></span>
+                    </a>
+                </div>
+                <div style="padding-bottom: 10px;">
+                    <a type="button" class="btn btn-default btn-lg">
+                        <span class="glyphicon glyphicon-folder-close" style="font-size: 20px"></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-xs-11" style="text-align: center;">
+                {{> bulbsList}}
+            </div>
         </div>
 
-        <div class="col-xs-4">
-            Chat Template
-        </div>
     </div>
 
     <!-- Add Bulb Modal -->

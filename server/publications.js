@@ -15,3 +15,11 @@ Meteor.publish('comments', function(sparkId)  {
     check(sparkId, String);
     return Comments.find({ sparkId: sparkId });
 });
+
+Meteor.publish('messages', function(projectId) {
+    //check(options, {
+    //    sort: Object,
+    //    limit: Number
+    //});
+    return Messages.find({ projectId: projectId });
+});

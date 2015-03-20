@@ -1,3 +1,7 @@
+Template.account.created = function() {
+    return Session.set('inProject', false);
+};
+
 $('#projects a').click(function (e) {
     e.preventDefault();
     $(this).tab('show')

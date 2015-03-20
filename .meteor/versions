@@ -54,6 +54,7 @@ reload@1.1.2
 retry@1.0.2
 routepolicy@1.0.4
 sacha:spin@2.0.4
+schmitzjake:bootswatch-lumen@0.1.2
 service-configuration@1.0.3
 session@1.0.5
 sha@1.0.2
@@ -63,7 +64,6 @@ srp@1.0.2
 stylus@1.0.6
 templating@1.0.11
 tracker@1.0.5
-twbs:bootstrap@3.3.2
 ui@1.0.5
 underscore@1.0.2
 url@1.0.3
