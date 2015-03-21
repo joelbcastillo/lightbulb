@@ -1,0 +1,3 @@
+Template.projectPage.created = function() {
+    Session.set('currentProjectId', this.params._id);
+};

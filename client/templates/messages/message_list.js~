@@ -1,5 +1,6 @@
 Template.messageList.helpers({
     messages: function () {
+	console.log( this._id );
         return Messages.find({projectId: (this.projectId || this._id)}, {sort: {createdDate: 1} });
     }
 });

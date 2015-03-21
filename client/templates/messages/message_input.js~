@@ -16,7 +16,7 @@ Template.messageInput.events({
         var messageProperties = {
             message: $('#enteredMessage').val(),
             username: Meteor.user().username,
-            projectId: (template.data.projectId || template.data._id)
+            projectId: template.data._id
         };
 
         if (!messageProperties.message || !messageProperties.username) {

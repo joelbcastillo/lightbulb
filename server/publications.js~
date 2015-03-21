@@ -6,10 +6,6 @@ Meteor.publish('bulbs', function() {
     return Bulbs.find();
 });
 
-Meteor.publish('messages', function() {
-    return Messages.find();
-});
-
 Meteor.publish('sparks', function(bulbId) {
     check(bulbId, String);
     return Sparks.find({ bulbId: bulbId });
@@ -20,3 +16,10 @@ Meteor.publish('comments', function(sparkId)  {
     return Comments.find({ sparkId: sparkId });
 });
 
+Meteor.publish('messages', function() {
+    //check(options, {
+    //    sort: Object,
+    //    limit: Number
+    //});
+    return Messages.find();
+});

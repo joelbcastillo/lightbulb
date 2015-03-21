@@ -3,7 +3,7 @@
         {{>header}}
         {{>errors}} <!-- For bulb exists error, do an error in the modal (like empty title error) -->
 
-        <!--{{#if inProject}}
+        {{#if inProject}}
             <div class="row">
                 <div class="col-xs-8">
                     {{> yield}}
@@ -12,8 +12,8 @@
                     {{> chat}}
                 </div>
             </div>
-        {{else}}-->
+        {{else}}
             {{> yield}}
-        <!--{{/if}}-->
+        {{/if}}
     </div>
 </template>
