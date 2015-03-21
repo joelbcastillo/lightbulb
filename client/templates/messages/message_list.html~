@@ -1,5 +1,5 @@
 <template name="messageList">
-    <div class="form-control message-list" id="messages" style="height: 400px; overflow-y: scroll;">
+    <div class="form-control message-list" id="messages" style="height: 300px; overflow-y: scroll;">
         <ul class="media-list">
             {{#each messages}}
                 <li class="media">

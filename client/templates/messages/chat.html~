@@ -1,0 +1,4 @@
+<template name="chat">
+    {{> messageList}}
+    {{> messageInput}}
+</template>
