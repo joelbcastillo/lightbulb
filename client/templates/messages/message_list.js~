@@ -1,6 +1,5 @@
 Template.messageList.helpers({
     messages: function () {
-	console.log( this._id );
         return Messages.find({projectId: (this.projectId || this._id)}, {sort: {createdDate: 1} });
     }
 });
@@ -8,7 +7,10 @@ Template.messageList.helpers({
 
 Template.messageList.rendered = function() {
     if(!this._rendered) {
+	
         message_cont = $('#messages');
         message_cont.scrollTop = message_cont.scrollHeight;
+	
+	$("#messages").animate({ scrollTop: $("#messages")[0].scrollHeight}, 1000);
     }
 };

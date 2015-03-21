@@ -7,7 +7,6 @@ Template.messageList.helpers({
 
 Template.messageList.rendered = function() {
     if(!this._rendered) {
-        message_cont = $('#messages');
-        message_cont.scrollTop = message_cont.scrollHeight;
+	$("#messages").animate({ scrollTop: $("#messages")[0].scrollHeight}, 1000);
     }
 };
