@@ -1,23 +1,14 @@
 Template.messageInput.events({
     'submit form': function(event, template) {
         event.preventDefault();
-
-        message_cont = $('#messages');
-        message_cont.scrollTop = message_cont.scrollHeight;
-
-        $('#enteredMessage').keyup(function(e) {
-
-            if (e.keyCode == 13) {
-                message_cont.scrollTop = message_cont.scrollHeight;
-                $(this).val('');
-            }
-        }).focus();
-
+        
         var messageProperties = {
             message: $('#enteredMessage').val(),
             username: Meteor.user().username,
             projectId: (template.data.projectId || template.data._id)
         };
+
+	$('#enteredMessage').val('');
 
         if (!messageProperties.message || !messageProperties.username) {
             return;
@@ -26,5 +17,6 @@ Template.messageInput.events({
             if (error)
                 return alert(error.reason);
         });
+	$("#messages").animate({ scrollTop: $("#messages")[0].scrollHeight}, 1000);
     }
 });
