@@ -170,3 +170,8 @@ body {
 .spark-bad {
     background-color: #cd6362;
 }
+.luminance {
+    /*width: 225px;*/
+    /*margin: 0 auto;*/
+    background: rgba(255,255,0,.5);
+}
