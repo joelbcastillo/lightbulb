@@ -20,3 +20,11 @@ Meteor.publish('comments', function(sparkId)  {
     return Comments.find({ sparkId: sparkId });
 });
 
+Meteor.publish('users', function() {
+    return Meteor.users.find();//{}, {
+    //    fields : {
+    //        'username' : 1
+    //        //'email' : 1
+    //    }
+    //});
+});
