@@ -6,6 +6,7 @@ Template.projectsListSelf.helpers({
 
 Template.projectsListOther.helpers({
     projects: function () {
-        return Projects.find({userId: {$ne: Meteor.userId()}}, {sort: {submitted: -1}});
+        return Projects.find({users: Meteor.userId()}, {sort: {submitted: -1}});
+        //return Projects.find(userId: )
     }
 });

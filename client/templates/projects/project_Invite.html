@@ -1,6 +1,7 @@
 <template name="projectInvite">
-    <form>
-        <div class="form-group">
+    <form name="inviteUser">
+        <span class="help-block">{{ errorMessage }}</span>
+        <div class="form-group {{ errorClass }}">
             <!--<label class="control-label" for="username">Username</label>-->
             <div class="controls">
                 <input name="username" id="username" type="text" value="" placeholder="Username" class="form-control"/>
@@ -9,7 +10,7 @@
         <p>
             OR
         </p>
-        <div class="form-group">
+        <div class="form-group {{ errorClass }}">
             <!--<label class="control-label" for="email">Email</label>-->
             <div class="controls">
                 <input name="email" id="email" type="text" value="" placeholder="Email" class="form-control"/>
