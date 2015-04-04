@@ -7,6 +7,12 @@ Template.messageList.helpers({
 
 Template.messageList.rendered = function() {
     if(!this._rendered) {
-	$("#messages").animate({ scrollTop: $("#messages")[0].scrollHeight}, 1000);
+        if(Session.get('animateChat')){
+            $("#messages").animate({ scrollTop: $("#messages")[0].scrollHeight}, 1000);
+            Session.set('animateChat', false);
+        }
+	    else{
+            $("#messages").animate({ scrollTop: $("#messages")[0].scrollHeight}, 1);
+        }
     }
 };

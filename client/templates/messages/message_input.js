@@ -17,6 +17,6 @@ Template.messageInput.events({
             if (error)
                 return alert(error.reason);
         });
-	$("#messages").animate({ scrollTop: $("#messages")[0].scrollHeight}, 1000);
+	$("#messages").animate({ scrollTop: $("#messages")[0].scrollHeight}, 1);
     }
 });
