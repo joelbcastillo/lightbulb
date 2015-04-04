@@ -12,6 +12,12 @@ $('#teams a').click(function (e) {
     $(this).tab('show')
 });
 
+Template.account.helpers({
+    pendingProjects: function() {
+        return !!Projects.find({_id: {$in: Meteor.user().pendingProjects}}).count();
+    }
+});
+
 //Template.account.helpers ({
 //    selfProjectCount: function() {
 //        return Projects.find({userId: Meteor.userId()}).count();
