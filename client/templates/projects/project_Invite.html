@@ -1,19 +1,20 @@
 <template name="projectInvite">
     <form name="inviteUser">
-        <span class="help-block">{{ errorMessage }}</span>
-        <div class="form-group {{ errorClass }}">
+        <div class="form-group {{ errorClass 'username' }}">
             <!--<label class="control-label" for="username">Username</label>-->
             <div class="controls">
                 <input name="username" id="username" type="text" value="" placeholder="Username" class="form-control"/>
+                <span class="help-block">{{ errorMessage 'username' }}</span>
             </div>
         </div>
         <p>
             OR
         </p>
-        <div class="form-group {{ errorClass }}">
+        <div class="form-group {{ errorClass 'email' }}">
             <!--<label class="control-label" for="email">Email</label>-->
             <div class="controls">
                 <input name="email" id="email" type="text" value="" placeholder="Email" class="form-control"/>
+                <span class="help-block">{{ errorMessage 'email' }}</span>
             </div>
         </div>
         <input type="submit" value="Submit" class="btn btn-default"/>

@@ -27,8 +27,6 @@ Template.bulbAdd.events({
 
         Meteor.call('bulbInsert', bulb, function(error, result) {
 
-            //console.log(result);
-
             if ( error )
                 return throwError(error.reason);
 

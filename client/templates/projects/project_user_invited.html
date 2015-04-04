@@ -1,0 +1,10 @@
+<template name="projectUserInvited">
+    {{#each pendingProjects}}
+        <form>
+            <p style="font-size: 18px;">{{name}}</p>
+            <input type="button" class="btn btn-primary btn-xs accept" value="accept" data-dismiss={{dismiss}} />
+            <input type="button" class="btn btn-danger btn-xs decline" value="decline" data-dismiss={{dismiss}} />
+        </form>
+        <br/>
+    {{/each}}
+</template>
