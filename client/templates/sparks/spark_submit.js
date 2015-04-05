@@ -27,7 +27,7 @@ Template.sparkSubmit.events({
             return Session.set('sparkSubmitErrors', errors);
         }
 
-        Meteor.call('sparkInsert', spark, function(error, sparkId) {
+        Meteor.call('sparkInsert', spark, function(error) {
             if (error){
                 throwError(error.reason);
             } else {
