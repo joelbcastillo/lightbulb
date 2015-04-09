@@ -1,0 +1,11 @@
+<template name="feedList">
+    <div class="form-control feed-list" id="feedList" style="height: 100px; overflow-y: scroll;">
+        <ul class="media-list">
+            {{#each notifications}}
+                <li class="media">
+                    {{> feedItem}}
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</template>
