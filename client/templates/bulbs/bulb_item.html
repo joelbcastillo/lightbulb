@@ -1,13 +1,15 @@
 <template name="bulbItem">
 
     <script>
-        $('.bulbPopover').popover(); // has sticking problem
+        $('.bulbPopover').popover();
     </script>
     <span class="image-wrapper" style="position: relative;">
         <a href="{{pathFor 'bulbPage'}}">
-            <img src="/1x1.png" id='{{_id}}' alt="{{title}}" style="padding: 10px; {{luminance}};" width="200px" height="200px"/>
+            <img src="/1x1.png" id='{{_id}}' alt="{{title}}" style="padding: 10px; {{luminance_css}};" width="200px" height="200px"/>
             <span class="bulbPopover" style="text-align: center; position: absolute; left: 0; top: -80px; color: #000; width: 160px; margin: 20px; font-size: 16px;" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="{{synopsis}}">
                 {{title}}
+                <br/>
+                <strong>{{luminance_value}}</strong>
             </span>
         </a>
     </span>
