@@ -6,8 +6,13 @@ Meteor.publish('bulbs', function() {
     return Bulbs.find();
 });
 
-Meteor.publish('messages', function() {
-    return Messages.find();
+Meteor.publish('messages', function(options) {
+    check(options, {
+        projectId: String,
+        sort: Object,
+        limit: Number
+    });
+    return Messages.find({}, options);
 });
 
 Meteor.publish('sparks', function(bulbId) {
@@ -25,10 +30,5 @@ Meteor.publish('notifications', function() {
 });
 
 Meteor.publish('users', function() {
-    return Meteor.users.find();//{}, {
-    //    fields : {
-    //        'username' : 1
-    //        //'email' : 1
-    //    }
-    //});
+    return Meteor.users.find();
 });
