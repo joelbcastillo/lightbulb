@@ -20,6 +20,10 @@ Meteor.publish('comments', function(sparkId)  {
     return Comments.find({ sparkId: sparkId });
 });
 
+Meteor.publish('notifications', function() {
+    return Notifications.find();
+});
+
 Meteor.publish('users', function() {
     return Meteor.users.find();//{}, {
     //    fields : {
