@@ -50,8 +50,8 @@
 
         <!-- Use template for user-->
         <div class="col-xs-3" style="text-align: center;">
-            <h3>Dirk Diggler</h3>
-            <h5>BrockLanders</h5>
+            <h3>{{currentUser.profile.firstName}} {{currentUser.profile.lastName}}</h3>
+            <h5>{{currentUser.username}}</h5>
 
             <p>
                 <img src="http://placehold.it/200x200" alt="User Avatar" width="200px" height="200px">
@@ -63,17 +63,23 @@
             </p>
             <div style="padding-top: 10px; padding-bottom: 10px;">
                 <p>
-                    <a href="#">ddigg@email.com</a><br/>
+                    <a href="#">{{currentUser.profile.email}}</a><br/>
                 </p>
                 <p>
-                    New York, New York
+                    {{currentUser.profile.location}}
                 </p>
             </div>
             <p>
-                <span class="glyphicon glyphicon-time"></span> Member Since: <br/> <strong>December 21, 2012</strong>
+                <span class="glyphicon glyphicon-time"></span> Member Since: <br/> <strong>{{currentUser.createdAt}}</strong>
             </p>
         </div>
 
+    </div>
+    <br/>
+    <div class="row" style="padding-right: 25px;">
+        <div class="col-xs-10" style="width: 900px;">
+            {{> feedActivity}}
+        </div>
     </div>
 
     <!-- Add Project Modal -->
@@ -101,6 +107,21 @@
                 </div>
                 <div class="modal-body">
                     {{> projectUserInvited}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal fade" id="editProfileModal" tabindex="-1" role="dialog" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Edit Profile</h4>
+                </div>
+                <div class="modal-body">
+                    {{> projectCreate}}
                 </div>
             </div>
         </div>
