@@ -34,8 +34,12 @@
                     </a>
                 </div>
                 <div style="padding-bottom: 10px;">
-                    <a type="button" class="btn btn-default btn-lg">
-                        <span class="glyphicon glyphicon-folder-close" style="font-size: 20px"></span>
+                    <a type="button" class="btn btn-default btn-lg archives">
+                        {{#if viewingArchives }}
+                            <span class="glyphicon glyphicon-folder-close" style="font-size: 20px"></span>
+                        {{else}}
+                            <span class="glyphicon glyphicon-folder-open" style="font-size: 20px"></span>
+                        {{/if}}
                     </a>
                 </div>
             </div>
