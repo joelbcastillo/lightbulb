@@ -36,5 +36,12 @@ Template.sparkItem.events({
         e.preventDefault();
 
         Meteor.call('downvote', this._id);
+    },
+    'click .delete': function(e) {
+        e.preventDefault();
+
+        if (confirm("Delete this spark?")) {
+            Meteor.call('removeSpark', this._id);
+        }
     }
 });
