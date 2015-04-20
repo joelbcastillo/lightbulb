@@ -1,0 +1,17 @@
+<template name="bulbEdit">
+    <form name="editBulb">
+        <div class="form-group">
+            <label class="control-label" for="name">Title</label>
+            <div class="controls">
+                <input name="title" id="title" type="text" value="{{title}}" placeholder="New title" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="synopsis">Synopsis</label>
+            <div class="controls">
+                <input name="synopsis" id="synopsis" type="text" value="{{synopsis}}" placeholder="New synopsis" class="form-control"/>
+            </div>
+        </div>
+        <input type="submit" value="Update" class="btn btn-default"/>
+    </form>
+</template>
