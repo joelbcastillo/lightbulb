@@ -16,10 +16,16 @@ Template.bulbPage.helpers({
     }
 });
 
+Template.bulbPage.rendered = function() {
+    var firstSpark = Sparks.findOne({bulbId: this.data._id});
+    Session.set("bulbId", this.data._id);
+    Session.set('sparkId', firstSpark._id);
+};
+
 Template.bulbPage.events({
     'click .archive': function(e) {
         e.preventDefault();
 
         Meteor.call('toggleArchived', this._id);
     }
-})
+});
