@@ -4,6 +4,7 @@ Template.projectPage.created = function() {
         Session.set('viewArchives', false);
     }
     Session.set('projectId', this.data._id);
+    localStorage.setItem('projectId', this.data._id);
 }
 
 Template.projectPage.helpers({

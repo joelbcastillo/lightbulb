@@ -7,32 +7,32 @@
             <div class="col-xs-12">
                 <span style="text-align: center;">
                     <a href="{{pathFor 'projectPage' _id=project._id}}">
-                        <h3>{{project.name}}</h3>
+                        <h1>{{project.name}}</h1>
                     </a>
-                    <p>{{project.description}}</p>
+                    <p class="lead">{{project.description}}</p>
                 </span>
                 <hr style="border-top: 1px solid #ccc;"> <!-- override bootstrap native css -->
             </div>
         </div>
 
         <div class="row">
-            <div class="col-xs-1">
+            <div class="col-xs-1" style="text-align: center">
                 <div style="padding-bottom: 10px;">
-                    <a type="button" class="btn btn-default" data-toggle="modal" data-target="#editBulbModal">
-                        <span class="glyphicon glyphicon-pencil" style="font-size: 16px"></span>
+                    <a type="button" class="btn btn-info" data-toggle="modal" data-target="#editBulbModal">
+                        <span class="glyphicon glyphicon-pencil" style="font-size: 35px"></span>
                     </a>
                 </div>
                 <div style="padding-bottom: 10px;">
-                    <a type="button" class="btn btn-default" data-toggle="modal" data-target="#createSparkModal">
-                        <span class="glyphicon glyphicon-plus" style="font-size: 16px"></span>
+                    <a type="button" class="btn btn-info" data-toggle="modal" data-target="#createSparkModal">
+                        <span class="glyphicon glyphicon-plus" style="font-size: 35px"></span>
                     </a>
                 </div>
                 <div style="padding-bottom: 10px;">
-                    <a type="button" class="btn btn-default archive">
+                    <a type="button" class="btn btn-info archive">
                         {{#if archived}}
-                            <span class="glyphicon glyphicon-floppy-open" style="font-size: 16px"></span>
+                            <span class="glyphicon glyphicon-floppy-open" style="font-size: 35px"></span>
                         {{else}}
-                            <span class="glyphicon glyphicon-floppy-save" style="font-size: 16px"></span>
+                            <span class="glyphicon glyphicon-floppy-save" style="font-size: 35px"></span>
                         {{/if}}
                     </a>
                 </div>
@@ -40,13 +40,17 @@
             <div class="col-xs-8">
                 <div class="media">
                     <div class="media-left">
-                        <a href="#">
-                            <img class="media-object" src="http://placehold.it/100x100" alt="bulb">
-                        </a>
+                        <span style="position: relative">
+                            <img src="/lightbulb_symbol_glow_360.png" style="position: absolute; {{luminance_css}}; left:0" width="168px" height="204px" alt="bulb">
+                            <img class="media-object" src="/lightbulb_symbol_360.png" width="168px" height="204px" alt="bulb">
+                            <span style="text-align: center; position: absolute; left: 0; top: -50px; color: #000; width: 128px; margin: 20px; font-size: 40px; font-weight: bold;">
+                                {{luminance_value}}
+                            </span>
+                        </span>
                     </div>
                     <div class="media-body">
-                        <h4 class="media-heading">{{title}}</h4>
-                        {{synopsis}}
+                        <h2 class="media-heading">{{title}}</h2>
+                        <p class="lead">{{synopsis}}</p>
                     </div>
                 </div>
 
