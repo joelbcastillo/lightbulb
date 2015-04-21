@@ -11,13 +11,9 @@ Template.sparkItem.helpers({
     },
     submittedText: function(){
         return this.submitted.toString();
-    }//,
-    //comments: function() {
-    //    return Comments.find({ sparkId: this._id });
-    //},
-    //selectedSpark: function(){
-    //    return Session.get("sparkId") === this._id;
-    //}
+    }, selected: function() {// should be a class instead of style
+        return Session.get("sparkId") == this._id ? "border: solid 2px #000;" : ""
+    }
 });
 
 Template.sparkItem.events({

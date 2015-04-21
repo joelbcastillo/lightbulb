@@ -12,7 +12,7 @@
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="projects">
                         <div class="col-xs-6" style="border-right: 1px solid #ccc;">
-                            <h4>
+                            <h3>
                                 Your Projects
                                 <!--You Own {{selfProjectCount}} Projects &lt;!&ndash; PLURALITY? &ndash;&gt;-->
                                 <!--<a class="btn btn-default pull-right" href="{{pathFor 'projectCreate'}}"><span class="glyphicon glyphicon-plus"></span></a>-->
@@ -22,12 +22,12 @@
                                 <a type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#createProjectModal">
                                     <span class="glyphicon glyphicon-plus"></span> New
                                 </a>
-                            </h4>
+                            </h3>
                             <br/>
                             {{>projectsListSelf}}
                         </div>
                         <div class="col-xs-6">
-                            <h4>
+                            <h3>
                                 Contributing Projects
                                 <!--You Contribute to {{otherProjectCount}} Projects-->
                                 {{#if pendingProjects}}
@@ -35,13 +35,13 @@
                                         <span class="glyphicon glyphicon-bell"></span> Invited
                                     </a>
                                 {{/if}}
-                            </h4>
+                            </h3>
                             <br/>
                             {{>projectsListOther}}
                         </div>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="teams">
-                        <h1>STOP! What are you doing here?! Teams have not yet been implemented.</h1>
+                        <h2>Implementation Pending.</h2>
                     </div>
                 </div>
 
