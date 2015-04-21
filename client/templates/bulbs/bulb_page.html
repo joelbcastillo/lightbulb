@@ -16,20 +16,24 @@
         </div>
 
         <div class="row">
-            <div class="col-xs-1"></div>
-            <div class="col-xs-1" style="text-align: center">
-                <div style="padding-bottom: 10px;">
-                    <a type="button" class="btn btn-info" data-toggle="modal" data-target="#editBulbModal">
+            <div class="col-xs-2" style="text-align: center">
+                <div style="padding-bottom: 20px;">
+                    <span style="position: relative;">
+                        <img src="/lightbulb_symbol_glow_360.png" style="position: absolute; {{luminance_css}}; left:0" width="168px" height="204px" alt="bulb">
+                        <img src="/lightbulb_symbol_360.png" width="168px" height="204px" alt="bulb">
+                        <span style="text-align: center; position: absolute; left: 0; top: -50px; color: #000; width: 128px; margin: 20px; font-size: 40px; font-weight: bold;">
+                            {{luminance_value}}
+                        </span>
+                    </span>
+                </div>
+                <div class="btn-group" role="group">
+                    <a type="button" class="btn btn-default" data-toggle="modal" data-target="#editBulbModal">
                         <span class="glyphicon glyphicon-pencil" style="font-size: 35px"></span>
                     </a>
-                </div>
-                <div style="padding-bottom: 10px;">
-                    <a type="button" class="btn btn-info" data-toggle="modal" data-target="#createSparkModal">
+                    <a type="button" class="btn btn-default" data-toggle="modal" data-target="#createSparkModal">
                         <span class="glyphicon glyphicon-plus" style="font-size: 35px"></span>
                     </a>
-                </div>
-                <div style="padding-bottom: 10px;">
-                    <a type="button" class="btn btn-info archive">
+                    <a type="button" class="btn btn-default archive">
                         {{#if archived}}
                             <span class="glyphicon glyphicon-floppy-open" style="font-size: 35px"></span>
                         {{else}}
@@ -39,37 +43,24 @@
                 </div>
             </div>
             <div class="col-xs-6">
-                <div class="media">
-                    <div class="media-left">
-                        <span style="position: relative">
-                            <img src="/lightbulb_symbol_glow_360.png" style="position: absolute; {{luminance_css}}; left:0" width="168px" height="204px" alt="bulb">
-                            <img class="media-object" src="/lightbulb_symbol_360.png" width="168px" height="204px" alt="bulb">
-                            <span style="text-align: center; position: absolute; left: 0; top: -50px; color: #000; width: 128px; margin: 20px; font-size: 40px; font-weight: bold;">
-                                {{luminance_value}}
-                            </span>
-                        </span>
-                    </div>
-                    <div class="media-body">
-                        <h2 class="media-heading">{{title}}</h2>
-                        <p class="lead">{{synopsis}}</p>
-                    </div>
-                </div>
+
+                <h3>{{title}}</h3>
+                <p class="lead">{{synopsis}}</p>
 
                 <br/>
 
-                <div class="col-xs-6">
+                <div class="col-xs-6" style="padding: 0;">
                     {{> sparksList}}
                 </div>
 
-                <div class="col-xs-6">
+                <div class="col-xs-6" style="padding-right: 0;">
                     {{> commentsList}}
                 </div>
             </div>
 
-            <div class="col-xs-3" style="text-align: left;">
+            <div class="col-xs-4" style="text-align: left;">
                 {{> chat}}
             </div>
-            <div class="col-xs-1"></div>
         </div>
 
     </div>

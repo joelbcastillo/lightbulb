@@ -141,10 +141,10 @@ body {
     position: fixed;
     z-index: 10000;
     padding: 10px;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     pointer-events: none;
 }
 .alert {
@@ -161,13 +161,13 @@ body {
 
 /* Additions */
 .spark-good {
-    background-color: #28b62c;
+    background-color: #7bb0ff;
 }
 .spark-neutral {
-    background-color: #faf508;
+    background-color: #faf76b;
 }
 .spark-bad {
-    background-color: #ff291c;
+    background-color: #ff7879;
 }
 .luminance {
     /*width: 225px;*/
