@@ -6,7 +6,7 @@
         <!--</a>-->
 
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-xs-12 project-header">
                 <span style="text-align: center;">
                     <h1>{{name}}</h1>
                     <p class="lead">{{description}}</p>
@@ -99,5 +99,22 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function resizeElements() {
+            var messageListHeight = $(window).height() - $('.project-header').height() - $('#header').height() - $('#message-input').height() - 20;
+            $('#messages').css('height', messageListHeight.toString() + 'px');
+        }
+
+        if ($(window).height() > 500) {
+            resizeElements();
+        }
+
+        $(window).resize(function(){
+            if ($(window).height() > 500) {
+                resizeElements();
+            }
+        });
+    </script>
 
 </template>
