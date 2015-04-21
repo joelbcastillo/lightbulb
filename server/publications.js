@@ -9,9 +9,13 @@ Meteor.publish('bulbs', function() {
 Meteor.publish('messages', function(options) {
     check(options, {
         projectId: String,
-        sort: Object,
-        limit: Number
+        sort: Object//,
+        //limit: Number
     });
+    /*var newOptions = _.extend(options, {
+        limit: 10
+    });
+    console.log(newOptions.limit);*/
     return Messages.find({}, options);
 });
 
