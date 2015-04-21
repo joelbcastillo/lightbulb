@@ -1,14 +1,14 @@
 <template name="commentsList">
 
-        {{# if isSelected }}
-            {{> commentSubmit}}
-        {{/ if }}
+    {{# if isSelected }}
+        {{> commentSubmit}}
+    {{/ if }}
 
-        <div style="margin-top: 20px; overflow-y: auto; height: 400px;">
-            <div class="comment">
-                {{#each comments}}
-                    {{> commentItem}}
-                {{/each}}
+    <div style="margin-top: 20px; overflow-y: auto; height: 400px;">
+        {{#each comments}}
+            <div class="comment" style="background-color: #f6f6f6">
+                {{> commentItem}}
             </div>
-        </div>
+        {{/each}}
+    </div>
 </template>
