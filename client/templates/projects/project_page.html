@@ -6,10 +6,10 @@
         <!--</a>-->
 
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-xs-12 project-header">
                 <span style="text-align: center;">
-                    <h3>{{name}}</h3>
-                    <p>{{description}}</p>
+                    <h1>{{name}}</h1>
+                    <p class="lead">{{description}}</p>
                 </span>
                 <hr style="border-top: 1px solid #ccc;"> <!-- override bootstrap native css -->
             </div>
@@ -19,30 +19,34 @@
             <div class="col-xs-1">
 
                 <div style="padding-bottom: 10px;">
-                    <a type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#createBulbModal">
-                        <span class="glyphicon glyphicon-plus" style="font-size: 20px"></span>
+                    <a type="button" class="btn btn-default btn-lg " data-toggle="modal" data-target="#createBulbModal">
+                        <span class="glyphicon glyphicon-plus" style="font-size: 40px"></span>
                     </a>
                 </div>
                 <div style="padding-bottom: 10px;">
                     <a type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#inviteUserModal">
-                        <span class="glyphicon glyphicon-user" style="font-size: 20px"></span>
+                        <span class="glyphicon glyphicon-user" style="font-size: 40px"></span>
                     </a>
                 </div>
                 <div style="padding-bottom: 10px;">
                     <a type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#editProjectModal">
-                        <span class="glyphicon glyphicon-pencil" style="font-size: 20px"></span>
+                        <span class="glyphicon glyphicon-pencil" style="font-size: 40px"></span>
                     </a>
                 </div>
                 <div style="padding-bottom: 10px;">
-                    <a type="button" class="btn btn-default btn-lg">
-                        <span class="glyphicon glyphicon-folder-close" style="font-size: 20px"></span>
+                    <a type="button" class="btn btn-default btn-lg archives">
+                        {{#if viewingArchives }}
+                            <span class="glyphicon glyphicon-folder-close" style="font-size: 40px"></span>
+                        {{else}}
+                            <span class="glyphicon glyphicon-folder-open" style="font-size: 40px"></span>
+                        {{/if}}
                     </a>
                 </div>
             </div>
-            <div class="col-xs-8">
+            <div class="col-xs-7" style="text-align: center">
                 {{> bulbsList}}
             </div>
-            <div class="col-xs-3" style="text-align: left;">
+            <div class="col-xs-4" style="text-align: left;">
                 {{> chat}}
             </div>
 
@@ -95,5 +99,22 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function resizeElements() {
+            var messageListHeight = $(window).height() - $('.project-header').height() - $('#header').height() - $('#message-input').height() - 20;
+            $('#messages').css('height', messageListHeight.toString() + 'px');
+        }
+
+        if ($(window).height() > 500) {
+            resizeElements();
+        }
+
+        $(window).resize(function(){
+            if ($(window).height() > 500) {
+                resizeElements();
+            }
+        });
+    </script>
 
 </template>

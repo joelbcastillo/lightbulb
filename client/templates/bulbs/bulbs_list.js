@@ -1,5 +1,9 @@
 Template.bulbsList.helpers({
-    bulbs: function() {
-        return Bulbs.find({projectId: this._id});
+    bulbs: function () {
+        if (Session.get('viewArchives')) {
+            return Bulbs.find({projectId: this._id, isArchived: true});
+        } else {
+            return Bulbs.find({projectId: this._id, isArchived: false});
+        }
     }
 });

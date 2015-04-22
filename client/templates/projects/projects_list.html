@@ -1,5 +1,5 @@
 <template name="projectsListSelf">
-    <div class="projects">
+    <div class="projects" id="ownedProjects" style="overflow-y: auto;">
         {{#each projects}}
             {{> projectItem}}
         {{/each}}
@@ -7,9 +7,27 @@
 </template>
 
 <template name="projectsListOther">
-    <div class="projects">
+    <div class="projects" id="contributingProjects" style="overflow-y: auto;">
         {{#each projects}}
             {{> projectItem}}
         {{/each}}
     </div>
+
+    <script>
+        function resizeElements() {
+            var projectListHeight = $(window).height() - $('#header').height() - 180;
+            $('#ownedProjects').css('height', projectListHeight.toString() + 'px');
+            $('#contributingProjects').css('height', projectListHeight.toString() + 'px');
+        }
+
+        if ($(window).height() > 500) {
+            resizeElements();
+        }
+
+        $(window).resize(function(){
+            if ($(window).height() > 500) {
+                resizeElements();
+            }
+        });
+    </script>
 </template>

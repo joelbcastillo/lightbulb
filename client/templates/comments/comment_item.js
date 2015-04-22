@@ -1,5 +1,5 @@
 Template.commentItem.helpers({
-    submittedText: function() {
-        return this.submitted.toString();
+    submittedTime: function() {
+        return this.submitted.toLocaleTimeString() + ", " + this.submitted.toDateString();
     }
 });

@@ -1,11 +1,6 @@
 <template name="commentItem">
-        <p>
-            {{author}}
-        </p>
-        <p>
-            {{body}}
-        </p>
-        <p class="small" style="text-align: right;">
-            {{submittedText}}
-        </p>
+        <blockquote>
+            <p style="font-size: 16px;">{{body}}</p>
+            <small>{{author}} • {{ submittedTime }}</small>
+        </blockquote>
 </template>
