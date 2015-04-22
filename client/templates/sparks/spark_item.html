@@ -1,15 +1,18 @@
 <template name="sparkItem">
 
-    <div class="spark well {{status}}">
-        <h5>
+    <div class="spark well {{status}} spark-comment" style="{{selected}}">
+        <h4 style="padding-bottom: 10px;">
             <span class="glyphicon glyphicon-flash"></span>
             {{body}}
-        </h5>
+        </h4>
+
         <a href="#" class="btn btn-default spark-comment">Comments ({{ commentsCount }})</a>
-        <div class="btn-group pull-right" role="group" aria-label="...">
-            <button type="button" class="btn btn-default upvote"><span class="glyphicon glyphicon-arrow-up"></span></button>
-            <button type="button" class="btn btn-default downvote"><span class="glyphicon glyphicon-arrow-down"></span></button>
+        <div class="btn-group pull-right" role="group">
+            <button type="button" class="btn btn-default upvote"><span class="glyphicon glyphicon-arrow-up"></span> ({{upvotes}})</button>
+            <button type="button" class="btn btn-default downvote"><span class="glyphicon glyphicon-arrow-down"></span> ({{downvotes}})</button>
+            <button type="button" class="btn btn-default delete"><span class="glyphicon glyphicon-remove"></span></button>
         </div>
+
     </div>
 
 </template>
