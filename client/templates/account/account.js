@@ -15,6 +15,9 @@ $('#teams a').click(function (e) {
 Template.account.helpers({
     pendingProjects: function() {
         return !!Projects.find({_id: {$in: Meteor.user().pendingProjects}}).count();
+    },
+    memberSince: function() {
+        return Meteor.user().createdAt.toDateString() + ", " + Meteor.user().createdAt.toLocaleTimeString();
     }
 });
 
