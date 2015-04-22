@@ -59,7 +59,10 @@
             <p>
                 <span class="glyphicon glyphicon-globe"></span> Online
                 <span style="margin-right:4em"></span>
-                <button class="btn btn-default btn-xs" href="#">Edit Profile</button>
+                <button class="btn btn-default btn-xs" data-toggle="modal" data-target="#editProfileModal">Edit Profile</button>
+                <!--<a type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#editProfileModal">-->
+                    <!--<span class="glyphicon glyphicon-bell"></span> Edit Profile-->
+                <!--</a>-->
             </p>
             <div style="padding-top: 10px; padding-bottom: 10px;">
                 <p>
@@ -121,7 +124,7 @@
                     <h4 class="modal-title" id="myModalLabel">Edit Profile</h4>
                 </div>
                 <div class="modal-body">
-                    {{> projectCreate}}
+                    {{> accountEdit}}
                 </div>
             </div>
         </div>

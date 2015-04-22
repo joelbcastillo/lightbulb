@@ -1,3 +1,29 @@
 <template name="accountEdit">
-
+    <form>
+        <div class="form-group">
+            <label class="control-label" for="firstName">First Name</label>
+            <div class="controls">
+                <input name="firstName" id="fName" type="text" value="{{currentUser.profile.firstName}}" placeholder="First name" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="lastName">Last Name</label>
+            <div class="controls">
+                <input name="lastName" id="lName" type="text" value="{{currentUser.profile.lastName}}" placeholder="Last Name" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="email">Email</label>
+            <div class="controls">
+                <input name="email" id="email" type="text" value="{{currentUser.profile.email}}" placeholder="Email" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="location">Email</label>
+            <div class="controls">
+                <input name="location" id="location" type="text" value="{{currentUser.profile.location}}" placeholder="Location" class="form-control"/>
+            </div>
+        </div>
+        <input type="submit" value="Submit" class="btn btn-default"/>
+    </form>
 </template>
