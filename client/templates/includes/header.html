@@ -9,7 +9,10 @@
                     <!--<span class="icon-bar"></span>-->
                 <!--</button>-->
                 <a class="navbar-brand" style="padding: 8px;" href="{{pathFor 'account'}}">
-                    <img alt="Brand" src="/lightbulb_symbol_360.png" height="36px">
+                    <span style="position: relative;">
+                        <img alt="Brand" src="/lightbulb_symbol_360.png" height="36px">
+                        <img id="header-bulb-glow" src="/lightbulb_symbol_glow_360.png" height="36px" style="position: absolute; left:0; opacity:0;">
+                    </span>
                 </a>
             </div>
 
@@ -24,4 +27,13 @@
             </div>
         </div>
     </nav>
+    <script>
+        // If you use fadeOut(), the span will collapse
+        // http://stackoverflow.com/questions/2127458/animate-opacity-on-hover-jquery
+        $("#header-bulb-glow").hover(function() {
+            $(this).stop().animate({"opacity": 1});
+        }, function() {
+            $(this).stop().animate({"opacity": 0});
+        });
+    </script>
 </template>
