@@ -11,6 +11,11 @@ Template.projectCreate.events({
         Meteor.call('projectInsert', project, function (error, result) {
             if (error)
                 return alert(error.reason);
+
+            if (result.projectExists) {
+                throwError('This project name has already been used');
+            }
+
             Router.go('projectPage', {_id: result._id});
         });
     }

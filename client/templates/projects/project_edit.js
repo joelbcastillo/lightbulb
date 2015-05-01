@@ -31,7 +31,7 @@ Template.projectEdit.events({
                 return throwError(error.reason);
 
             if (result.projectExists) {
-                throwError('This name has already been used');
+                throwError('This project name has already been used');
             }
 
             $('#editProjectModal').modal('hide');
